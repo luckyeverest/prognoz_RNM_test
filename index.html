@@ -1,0 +1,78 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>text-task</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+
+<body>
+    <!-- все классы и индификаторы не по БЭМ, потому что приложение пишу на сходу, если бы делал по макету то писал бы с БЭМ -->
+    <div class="container">
+
+        <div class="title-str">
+            <div class="center">
+                <p class="text-str">
+                    Сайт по планированию мероприятий
+                </p>
+            </div>
+        </div>
+        <div class="form">
+            <div class="form-control">
+                <label for="select">Выберете тип мероприятия
+                    <select class="select">
+                        <option disabled>Выберете тип мероприятия</option>
+                        <option value="open">открытое</option>
+                        <option value="close">закрытое</option>
+                    </select>
+                </label>
+            </div>
+            <div class="form-control">
+                <label for="input-title">Название мероприятия
+                    <input type="text" id="input-title">
+                </label>
+            </div>
+
+            <div class="form-control">
+                <label for="input-start-date">Дата начала мероприятия
+                    <input type="date" id="input-start-date">
+                </label>
+            </div>
+
+            <div class="form-control">
+                <label for="input-end-date">Дата окончания мероприятия
+                    <input type="date" id="input-end-date">
+                </label>
+            </div>
+
+            <div class="form-control">
+                <label for="text">Описание мероприятия
+                    <input type="text" id="text">
+                </label>
+            </div>
+
+            <div>
+                <button id="btn-add">Добавить мероприятие</button>
+
+            </div>
+
+        </div>
+        <div class="plan-event">
+            <p class="text-str">
+                Запланированые мероприятия
+            </p>
+            <div class="filter">
+                <button class="btn btn-type-all" data-filter='all'>all</button>
+                <button class="btn btn-type-open" data-filter='open'>open</button>
+                <button class="btn btn-type-close" data-filter='close'>close</button>
+            </div>
+            <ul id="result"></ul>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+
+</html>
